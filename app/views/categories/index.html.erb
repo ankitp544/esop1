@@ -4,19 +4,14 @@
   <title>Esop</title>
 </head>
 <body>
-  <p>ESOP Every Service at one place</p>
-  <a href='user_login_page'>Login</a>
-  <a href='user_signup'>Sign Up</a>
-  <a href='seller_registration_page'>Seller</a>
-  <form method="get">
-    <label for="search_bar">Search anything near you</label>
-    <br>
-    <input type="text" name="search" id="search_bar">
-  </form>
-  <% @categories.each do |category|%>
-    <a> <%= category.name %> </a>
-    <br>
-  <%end%>
+  <ul class="list-group", style="width: 200px;">
+    <!-- sort -->
+    <% @categories.each do |category|%>
+      <li class="list-group-item">
+        <a href="#">  <%= category.name %> </a>
+      </li>
+    <%end%>
+  </ul>
   <% @categories.each do |category|%>
     <a>
       <%= image_tag('Doctors.jpg') %>
