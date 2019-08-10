@@ -9,5 +9,4 @@ class Seller
   validates :email, presence: true
   validates :phone_no, presence: true
   validates :owner_first_name, presence: true
-  #services and products
 end
