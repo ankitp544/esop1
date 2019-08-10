@@ -4,19 +4,29 @@
   <title>Esop</title>
 </head>
 <body>
-  <ul class="list-group", style="width: 200px;">
-    <!-- sort -->
-    <% @categories.each do |category|%>
-      <li class="list-group-item">
-        <a href="#">  <%= category.name %> </a>
-      </li>
-    <%end%>
-  </ul>
-  <% @categories.each do |category|%>
-    <a>
-      <%= image_tag('Doctors.jpg') %>
-      <%= category.name %>
-    </a>
-  <%end%>
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="list-group">
+        <!-- sort -->
+        <% @categories.each do |category|%>
+          <li class="list-group-item">
+            <a href="#">  <%= category.name %> </a>
+          </li>
+        <%end%>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <% @categories.each do |category|%>
+        <a>
+          <div style="margin-top: 2px;">
+            <%= image_tag('Doctors.jpg') %>
+            <div style="position: absolute; color: red;">
+              <%= category.name %>
+            </div>
+          </div>
+        </a>
+      <%end%>
+    </div>
+  </div>
 </body>
 </html>
